@@ -1,0 +1,17 @@
+name: transep
+
+channels:
+    - conda-forge
+
+dependencies:
+    - python=3.9
+    - pip
+    - click
+    - numpy
+    - scipy
+    - pandas
+    - matplotlib
+    - seaborn
+    - tqdm
+    - pip:
+        - diag-eff
