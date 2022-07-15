@@ -1,5 +1,7 @@
 # TRANSEP
-# <img src="doc/_static/logo.png" align="center" width="300" />
+<p align="center">
+  <img src="doc/_static/logo.png" width="400">
+</p>
 
 The transfer function hydrograph separation (TRANSEP) package provides coupled
 but constrained representations of transport and hydraulic transfer functions.
