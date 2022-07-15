@@ -24,3 +24,11 @@ Linear transfer function
 Parallel transfer function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. autofunction:: transep.transep.parallel_linear_reservoir_function
+
+
+Effective precipitation
+-----------------------
+
+Loss function
+~~~~~~~~~~~~~~
+.. autofunction:: transep.transep.loss_function

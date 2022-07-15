@@ -201,6 +201,53 @@ def gamma_function(tau, alpha=1, beta=1):
     return gout
 
 
+def loss_function(prec, b1, b2, b3):
+    r"""Loss function to generate effective precipitation
+
+    .. math::
+
+        s(t)=b_{1} p(t)+\left(1-b_{2}^{-1}\right) s(t-\Delta t)
+        s(t=0)=b_{3}
+        p_{eff}(t)=p(t) s(t)
+
+
+    Weiler, M., McGlynn, B. L., McGuire, K. J., and McDonnell, J. J.: How does
+    rainfall become runoff? A combined tracer and runoff transfer function
+    approach, Water Resources Research, 39, https://doi.org/10.1029/2003wr002331,
+    2003.
+
+    Args
+    ----
+    prec : np.array
+        precipitation
+
+    b1 : float
+        parameter
+
+    b2 : float
+        parameter to exponentially weigh the precipitation backward in time
+
+    b3 : float
+        initial antecedent precipitation index
+
+    Returns
+    -------
+    prec_eff : float, np.array
+        effective precipitation
+    """
+    s_t = np.zeros((len(prec),))
+    prec_eff = np.zeros((len(prec),))
+    for t in range(len(prec)):
+        if t == 0:
+            s_t[t] = b1 * prec[t] + (1 - b2**-1) * b3
+        else:
+            s_t[t] = b1 * prec[t] + (1 - b2**-1) * s_t[t-1]
+
+    prec_eff = prec * s_t
+
+    return prec_eff
+
+
 def simulate(input, g, dtau, **kwargs):
     """Runs simulation of transport model
 
