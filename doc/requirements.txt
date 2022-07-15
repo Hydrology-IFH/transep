@@ -2,3 +2,4 @@ ipython
 autoapi
 numpydoc
 sphinx_rtd_theme
+nbsphinx

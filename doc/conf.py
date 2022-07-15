@@ -12,10 +12,10 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
-
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+import transep
 
 # -- Project information -----------------------------------------------------
 
@@ -24,9 +24,14 @@ copyright = '2022, Robin Schwemmle'
 author = 'Robin Schwemmle'
 
 # The short X.Y version
-version = ''
+version = '1.0'
 # The full version, including alpha/beta/rc tags
-release = '1.0.0'
+release = '1.0'
+
+# # The short X.Y version
+# version = transep.__version__
+# # The full version, including alpha/beta/rc tags
+# release = transep.__version__
 
 
 # -- General configuration ---------------------------------------------------
@@ -44,14 +49,13 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-#    'sphinx.ext.mathjax',
-    'sphinx.ext.imgmath',
+    'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon',
     'IPython.sphinxext.ipython_console_highlighting',
     'IPython.sphinxext.ipython_directive',
-    'numpydoc'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -143,7 +147,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'transep.tex', 'transep Documentation',
-     'Mirko Mälicke', 'manual'),
+     'Robin Schwemmle', 'manual'),
 ]
 
 
@@ -152,7 +156,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'transep', 'package Template Documentation',
+    (master_doc, 'transep', 'transep Documentation',
      [author], 1)
 ]
 
@@ -163,8 +167,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'transep', 'package Template Documentation',
-     author, 'transep', 'One line description of project.',
+    (master_doc, 'transep', 'transep Documentation',
+     author, 'transep', 'Transfer function hydrograph separation',
      'Miscellaneous'),
 ]
 

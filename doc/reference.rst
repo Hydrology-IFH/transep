@@ -2,14 +2,25 @@
 API Reference
 =============
 
+Transfer functions
+------------------
 
-.. toctree::
-    :maxdepth: 2
+Dispersion transfer function
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. autofunction:: transep.transep.dispersion_function
 
-core package
-============
+Exponential-piston transfer function
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. autofunction:: transep.transep.exponential_piston_function
 
-transep
-~~~~~~~
+Gamma transfer function
+~~~~~~~~~~~~~~~~~~~~~~~
+.. autofunction:: transep.transep.gamma_function
 
-.. autofunction:: transep.transep
+Linear transfer function
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. autofunction:: transep.transep.linear_reservoir_function
+
+Parallel transfer function
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. autofunction:: transep.transep.parallel_linear_reservoir_function

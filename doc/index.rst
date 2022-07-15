@@ -6,11 +6,11 @@ but constrained representations of transport and hydraulic transfer functions.
 These functions can be used to simulate hydrologic response (e.g. discharge)
 and tracer concentrations. The following models are available:
 
-- Dispersion model (DM)
-- Exponential piston model (EPM)
-- Gamma model (GM)
-- Linear reservoir model (LRM)
-- Parallel linear reservoir model (PLRM)
+* Dispersion model (DM)
+* Exponential piston model (EPM)
+* Gamma model (GM)
+* Linear reservoir model (LRM)
+* Parallel linear reservoir model (PLRM)
 
 
 .. toctree::
@@ -21,9 +21,9 @@ and tracer concentrations. The following models are available:
    get-started
 
 .. toctree::
-  :maxdepth: 1
-  :caption: Reference
+   :maxdepth: 2
+   :caption: Reference
 
-  reference
+   reference
 
-  Visit us on GitHub <https://github.com/schwemro/transep>
+   Visit us on GitHub <https://github.com/schwemro/transep>
