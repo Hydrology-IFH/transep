@@ -1,7 +1,8 @@
 /examples
 
 # documentation and profiler output
-#*.html
+*.html
+/doc/_build
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
