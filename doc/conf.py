@@ -24,14 +24,9 @@ copyright = '2022, Robin Schwemmle'
 author = 'Robin Schwemmle'
 
 # The short X.Y version
-version = '1.0'
+version = transep.__version__
 # The full version, including alpha/beta/rc tags
-release = '1.0'
-
-# # The short X.Y version
-# version = transep.__version__
-# # The full version, including alpha/beta/rc tags
-# release = transep.__version__
+release = transep.__version__
 
 
 # -- General configuration ---------------------------------------------------
