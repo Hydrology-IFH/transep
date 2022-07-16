@@ -27,9 +27,9 @@ def convolution_integral(input, g, dtau, **kwargs):
     """
     t = np.arange(1, len(input) + 1)
     gout = g(t, **kwargs)
-    fout = np.convolve(input, gout, mode='same') * dtau
+    fout = np.convolve(input, gout, mode='full')[:len(t)] * dtau
 
-    return fout[::-1]
+    return fout
 
 
 def convolution_integral_explicit(input, g, dtau, **kwargs):
@@ -60,7 +60,6 @@ def convolution_integral_explicit(input, g, dtau, **kwargs):
     out = np.zeros(len(t))
     for i in range(1, len(t)):
         out[i:] = out[i:] + input[i] * gout[:-i]
-
     return out
 
 
@@ -157,12 +156,43 @@ def parallel_linear_reservoir_function(tau, mtt_slow=40, mtt_fast=10, frac_fast=
     gout : float, np.array
         travel time distribution
     """
-    gout = (frac_fast / mtt_fast) * np.exp(-tau/mtt_fast) + (1 - frac_fast / mtt_slow) * np.exp(-tau/mtt_slow)
+    gout = (frac_fast / mtt_fast) * np.exp(-tau/mtt_fast) + ((1 - frac_fast)/mtt_slow) * np.exp(-tau/mtt_slow)
 
     return gout
 
 
 def exponential_piston_function(tau, mtt=40, eta=1):
+    r"""Exponential-piston function for exponential-piston model
+
+    .. math::
+
+        g(\tau)=\frac{\eta}{\tau_{0}} \exp \left(\frac{-\eta \tau}{\tau_{0}}+\eta-1\right) \quad \text { for } \quad \tau \geq \tau_{0}\left(1-\eta^{-1}\right)
+
+        g(\tau)=0 \quad \text { for } \quad \tau<\tau_{0}\left(1-\eta^{-1}\right)
+
+        Weiler, M., McGlynn, B. L., McGuire, K. J., and McDonnell, J. J.: How
+        does rainfall become runoff? A combined tracer and runoff transfer
+        function approach, Water Resources Research, 39,
+        https://doi.org/10.1029/2003wr002331, 2003.
+
+    Args
+    ----
+    tau : float, np.array
+        time step
+
+    mtt : float
+        mean travel time
+
+    eta : float
+        parameter which equals the total volume of water divided by the
+        exponential flow volume
+
+    Returns
+    -------
+    gout : float, np.array
+        travel time distribution
+    """
+
     gout = np.where(tau >= mtt * (1 - eta**(-1)), (eta/mtt) * np.exp(((-eta**tau)/mtt) + eta - 1), 0)
 
     return gout
