@@ -167,8 +167,8 @@ def exponential_piston_function(tau, mtt=40, eta=1):
     .. math::
 
         \begin{eqnarray}
-            g(\tau)=\frac{\eta}{\tau_{0}} \exp \left(\frac{-\eta \tau}{\tau_{0}}+\eta-1\right) \quad \text { for } \quad \tau \geq \tau_{0}\left(1-\eta^{-1}\right) \\
-            g(\tau)=0 \quad \text { for } \quad \tau<\tau_{0}\left(1-\eta^{-1}\right)
+            g(\tau) & = & \frac{\eta}{\tau_{m}} \exp \left(\frac{-\eta \tau}{\tau_{m}}+\eta-1\right) \quad \text { for } \quad \tau \geq \tau_{m}\left(1-\eta^{-1}\right) \\
+            g(\tau) & = & 0 \quad \text { for } \quad \tau<\tau_{m}\left(1-\eta^{-1}\right)
         \end{eqnarray}
 
     Weiler, M., McGlynn, B. L., McGuire, K. J., and McDonnell, J. J.: How
@@ -238,9 +238,9 @@ def loss_function(prec, b1, b2, b3):
     .. math::
 
         \begin{eqnarray}
-            s(t)=b_{1} p(t)+\left(1-b_{2}^{-1}\right) s(t-\Delta t) \\
-            s(t=0)=b_{3} \\
-            p_{eff}(t)=p(t) s(t)
+            s(t )& = & b_{1} p(t)+\left(1-b_{2}^{-1}\right) s(t-\Delta t) \\
+            s(t=0) & = & b_{3} \\
+            p_{eff}(t) & = & p(t) s(t)
         \end{eqnarray}
 
 
