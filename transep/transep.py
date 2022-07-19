@@ -79,7 +79,7 @@ def dispersion_function(tau, p_d=0.1, mtt=40):
     Args
     ----
     tau : float, np.array
-        time step
+        time step increment
 
     p_d : float
         dispersion parameter
@@ -111,7 +111,7 @@ def linear_reservoir_function(tau, mtt=40):
     Args
     ----
     tau : float, np.array
-        time step
+        time step increment
 
     mtt : float
         mean travel time
@@ -140,7 +140,7 @@ def parallel_linear_reservoir_function(tau, mtt_slow=40, mtt_fast=10, frac_fast=
     Args
     ----
     tau : float, np.array
-        time step
+        time step increment
 
     mtt_slow : float
         mean travel time of slow reservoir
@@ -166,19 +166,18 @@ def exponential_piston_function(tau, mtt=40, eta=1):
 
     .. math::
 
-        g(\tau)=\frac{\eta}{\tau_{0}} \exp \left(\frac{-\eta \tau}{\tau_{0}}+\eta-1\right) \quad \text { for } \quad \tau \geq \tau_{0}\left(1-\eta^{-1}\right)
-
+        g(\tau)=\frac{\eta}{\tau_{0}} \exp \left(\frac{-\eta \tau}{\tau_{0}}+\eta-1\right) \quad \text { for } \quad \tau \geq \tau_{0}\left(1-\eta^{-1}\right)\n
         g(\tau)=0 \quad \text { for } \quad \tau<\tau_{0}\left(1-\eta^{-1}\right)
 
-        Weiler, M., McGlynn, B. L., McGuire, K. J., and McDonnell, J. J.: How
-        does rainfall become runoff? A combined tracer and runoff transfer
-        function approach, Water Resources Research, 39,
-        https://doi.org/10.1029/2003wr002331, 2003.
+    Weiler, M., McGlynn, B. L., McGuire, K. J., and McDonnell, J. J.: How
+    does rainfall become runoff? A combined tracer and runoff transfer
+    function approach, Water Resources Research, 39,
+    https://doi.org/10.1029/2003wr002331, 2003.
 
     Args
     ----
     tau : float, np.array
-        time step
+        time step increment
 
     mtt : float
         mean travel time
@@ -236,8 +235,8 @@ def loss_function(prec, b1, b2, b3):
 
     .. math::
 
-        s(t)=b_{1} p(t)+\left(1-b_{2}^{-1}\right) s(t-\Delta t)
-        s(t=0)=b_{3}
+        s(t)=b_{1} p(t)+\left(1-b_{2}^{-1}\right) s(t-\Delta t)\n
+        s(t=0)=b_{3}\n
         p_{eff}(t)=p(t) s(t)
 
 
