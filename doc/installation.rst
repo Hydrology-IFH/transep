@@ -23,7 +23,7 @@ A more recent version might be available on GitHub.
 
 .. code-block:: bash
 
-    git clone https://github.com/schwemro/transep.git
+    git clone https://github.com/Hydrology-IFH/transep.git
     cd transep
     pip install -r requirements.txt
     pip install -e .

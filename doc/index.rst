@@ -30,4 +30,4 @@ and tracer concentrations. The following models are available:
 
    reference
 
-   Visit us on GitHub <https://github.com/schwemro/transep>
+   Visit us on GitHub <https://github.com/Hydrology-IFH/transep>
