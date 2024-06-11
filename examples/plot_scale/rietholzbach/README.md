@@ -18,5 +18,17 @@ Workflow:
 3. Run the simulation `python simulate_bromide.py`.
 4. Plot the simulation results `plot_bromide_time_series.py`.
 
+Bromide tracer experiment:
+See Menzel and Demuth (1993)
+
+Rietholzbach Lysimeter:
+See Seneviratne et al. (2012) and Hirschi et al. (2017)
+
 References:
+Hirschi, M., Michel, D., Lehner, I., and Seneviratne, S. I.: A site-level comparison of lysimeter and eddy covariance flux measurements of evapotranspiration, Hydrol. Earth Syst. Sci., 21, 1809-1825, https://doi.org/10.5194/hess-21-1809-2017, 2017.
+
+Menzel, L., and Demuth, N.: Tracerhydrologische Untersuchungen am Lysimeter Rietholzbach, Geographisches Institut ETH Zürich, Zurich, Switzerland, 24, 1993.
+
+Seneviratne, S. I., Lehner, I., Gurtz, J., Teuling, A. J., Lang, H., Moser, U., Grebner, D., Menzel, L., Schroff, K., Vitvar, T., and Zappa, M.: Swiss prealpine Rietholzbach research catchment and lysimeter: 32 year time series and 2003 drought event, Water Resources Research, 48, https://doi.org/10.1029/2011wr011749, 2012.
+
 Stumpp, C., Stichler, W., and Maloszewski, P.: Application of the environmental isotope δ18O to study water flow in unsaturated soils planted with different crops: Case study of a weighable lysimeter from the research field in Neuherberg, Germany, Journal of Hydrology, 368, 68-78, https://doi.org/10.1016/j.jhydrol.2009.01.027, 2009.
