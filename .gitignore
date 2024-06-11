@@ -1,5 +1,3 @@
-/examples
-
 # documentation and profiler output
 *.html
 /doc/_build
@@ -87,3 +85,8 @@ ENV/
 
 # EXCEL
 *.xlsx
+
+# projects with sensitive data 
+/examples/neuherberg/
+/examples/reckenholz/
+

@@ -4,7 +4,7 @@ channels:
     - conda-forge
 
 dependencies:
-    - python=3.8
+    - python=3.11
     - pip
     - click
     - numpy
@@ -13,5 +13,3 @@ dependencies:
     - matplotlib
     - seaborn
     - tqdm
-    - pip:
-        - diag-eff
