@@ -28,4 +28,4 @@ This software can be distributed freely under the MIT license. Please read the L
 Weiler, M., McGlynn, B. L., McGuire, K. J., and McDonnell, J. J.: How
 does rainfall become runoff? A combined tracer and runoff transfer
 function approach, Water Resources Research, 39,
-https://doi.org/10.1029/2003wr002331, 2003.
+[https://doi.org/10.1029/2003wr002331](https://doi.org/10.1029/2003wr002331), 2003.
