@@ -37,6 +37,7 @@ setup(
     license='MIT',
     description='Transfer function hydrograph separation model (TRANSEP)',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://transep.readthedocs.io",
     author='Robin Schwemmle',
     author_email='robin.schwemmle@hydrology.uni-freiburg.de',
